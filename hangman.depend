@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1724091723 source:/home/tasin/Documents/hangman/main.cpp
+	<iostream>
+	<fstream>
+	<vector>
+	<time.h>
+
