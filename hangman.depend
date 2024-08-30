@@ -1,8 +1,16 @@
 # depslib dependency file v1.0
-1724681677 source:/home/tasin/Documents/hangman/main.cpp
+1725043734 source:/home/tasin/Documents/hangman/main.cpp
 	<iostream>
 	<fstream>
 	<vector>
 	<time.h>
 	<algorithm>
+	"include/HangmanDrawer.h"
+
+1725043054 source:/home/tasin/Documents/hangman/HangmanDrawer.cpp
+	"include/HangmanDrawer.h"
+
+1725042638 /home/tasin/Documents/hangman/include/HangmanDrawer.h
+	<iostream>
+	<fstream>
 

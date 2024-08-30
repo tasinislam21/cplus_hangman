@@ -3,11 +3,13 @@
 #include <vector>
 #include <time.h>
 #include <algorithm>
+#include "include/HangmanDrawer.h"
 
 using namespace std;
 
 string choosen_word;
 int word_size;
+HangmanDrawer drawer;
 
 void get_random_word(){
 	vector<string> words;
@@ -78,7 +80,7 @@ bool game_process() {
     vector<char> already_inputted;
     vector<char> correctly_guessed;
     int i = 0;
-    while (i != 6){
+    while (i != 7){
         if (i > 0){
             cout << "So far, you have inputted: " << " ";
             for (auto element : already_inputted) {
@@ -99,6 +101,7 @@ bool game_process() {
         }
         else {
             cout << "That's incorrect." << endl;
+            cout << drawer.getDrawing(i) << endl;
             i++;
         }
     }
@@ -108,8 +111,6 @@ bool game_process() {
 int main(){
 	get_random_word();
     word_size = choosen_word.length();
-    cout << "Choosen words: " << choosen_word << endl;
-    cout << "Number of characters: " << word_size << endl;
     print_dashes();
     bool hasWon = game_process();
     if (hasWon){
